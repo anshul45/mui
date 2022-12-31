@@ -6,11 +6,11 @@ import Navbar from "./components/Navbar";
 import Rightbar from "./components/Rightbar";
 import Sidebar from "./components/Sidebar";
 
-const App = () => {
+function App() {
   const [mode, setMode] = useState("light");
   const darkTheme = createTheme({
     palette: {
-      mode: "",
+      mode: mode,
     },
   });
   return (
@@ -26,6 +26,6 @@ const App = () => {
       </Box>
     </ThemeProvider>
   );
-};
+}
 
 export default App;
